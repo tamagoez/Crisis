@@ -1,0 +1,39 @@
+{
+  "name": "crisis",
+  "version": "1.0.0",
+  "description": "RPG horror game",
+  "main": "src/app/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tsc": "tsc",
+    "nw": "nw src/",
+    "nwbuild": "nwbuild -p linux64,win64,osx64 -v0.46.2 -o src/ --flavor normal",
+    "start": "npm run build & npm run nw",
+    "build": "webpack --mode production",
+    "debug": "node",
+    "dev": "webpack-dev-server --mode development --config ./webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tamagoez/Crisis.git"
+  },
+  "author": "tamagoez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tamagoez/Crisis/issues"
+  },
+  "homepage": "https://github.com/tamagoez/Crisis#readme",
+  "dependencies": {
+    "expose-loader": "^4.0.0",
+    "nw": "^0.65.0-sdk",
+    "phaser": "^3.55.2",
+    "ts-loader": "^9.3.0",
+    "typescript": "^4.7.2",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.9.1"
+  },
+  "devDependencies": {
+    "npm-check-updates": "^13.0.4"
+  }
+}
